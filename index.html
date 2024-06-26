@@ -4,24 +4,43 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Movie Search with Axios</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.1/css/bulma.min.css"
+    />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <h1>Search For Movies</h1>
-    <form>
-      <label for="movie-name">
-        Movie Name:
-        <input
-          name="movie"
-          type="text"
-          id="movie-name"
-          placeholder="EX: Love"
-        />
-      </label>
-      <button type="submit">Search</button>
-    </form>
+    <section class="section">
+      <div class="container">
+        <h1 class="title is-1">Search For Movies</h1>
+        <form>
+          <div class="field">
+            <label for="movie-name" class="label"> Movie Name:</label>
+            <div class="control">
+              <input
+                class="input"
+                name="movie"
+                type="text"
+                id="movie-name"
+                placeholder="EX: Love"
+              />
+            </div>
+          </div>
+          <div class="field">
+            <div class="control">
+              <button class="button is-primary" type="submit">Search</button>
+            </div>
+          </div>
+        </form>
 
-    <div id="display"></div>
+        <section class="section">
+          <div class="fixed-grid has-3-cols">
+            <div class="grid" id="display"></div>
+          </div>
+        </section>
+      </div>
+    </section>
     <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
     <script src="./js/app.js"></script>
   </body>
